@@ -8,8 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Register from "./pages/Register/Register";
-import Login from "./pages/Register/Login";
+import Register from "./pages/Register&Login/Register";
+import Login from "./pages/Register&Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PaymentSuccess from "./pages/PaymentSuccess";
@@ -20,7 +20,7 @@ const App = () => {
     <Router> 
       <Navbar />
       <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/list/:category" element={<CategoryPage />} />
           <Route path="/product/:id" element={<SingleProductPage />} />
           <Route path="/cart" element={<CartPage />} />

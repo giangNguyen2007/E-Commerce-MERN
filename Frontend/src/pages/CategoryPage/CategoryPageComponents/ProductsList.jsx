@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ProductsList.css';
 import { popularProducts } from '../../../data'
-import ProductItem from './ProductCard'
+import ProductCard from './ProductCard'
 import axios from 'axios'
 import { adminRequest } from '../../../axios'
 
@@ -51,7 +51,7 @@ const Products = ({cat, colorFilter, sizeFilter}) => {
   return (
     <div className="products-container">
         {filteredProducts.map(
-            product => (<ProductItem product={product} key={product._id} />)
+            product => (<ProductCard product={product} key={product._id} />)
         )}
     </div>
     )

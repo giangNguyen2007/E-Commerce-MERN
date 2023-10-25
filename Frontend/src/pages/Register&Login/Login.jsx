@@ -19,9 +19,7 @@ const Login = () => {
       e.preventDefault();
 
       try {
-        // const response = await authenticate({username, email, password}, 'login');
-        const response = await authenticate({username:'giang-nguyen3', email:'rairacer@gmail.com',password: '12345'}, 'login');
-        // const response = await authenticate({username:'giang-nguyen4', email:'akatsuki@gmail.com',password: '12345'}, 'login');
+        const response = await authenticate({username, email, password}, 'login');
       
       } catch (e){
         console.log(e)

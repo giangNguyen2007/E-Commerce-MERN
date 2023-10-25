@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SelectAddCart from '../../../components/SelectAndAddCart/SelectAddCartModule'
 
-const ProductItem = ( {product, key}) => {
+const ProductCard = ( {product, key}) => {
 
 
   return (
@@ -33,4 +33,4 @@ const ProductItem = ( {product, key}) => {
     )
 }
 
-export default ProductItem
+export default ProductCard

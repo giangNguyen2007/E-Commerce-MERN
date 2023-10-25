@@ -1,10 +1,11 @@
 import StripeCheckout from "react-stripe-checkout";
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { baseRequest } from "../../../axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
+import { AuthContext } from "../../../context.js/AuthContext";
 
 
 const STRIPE_PUBLIC_KEY = 'pk_test_51O1p7mJ48YTMVMRZN3ydoUFTR9DHuiMEwcujai2JxY0bG0GqJc0K3BVjcn50KWByJYDce9ZJng6Xjvj3j172XrWx00LJzOokxn'
@@ -13,6 +14,7 @@ const PaymentButton = ({quantity}) => {
 
     const [stripeToken, setStripeToken] = useState(null);
     const navigate = useNavigate();
+    const {user} = useContext(AuthContext)
 
     // function to run after receiving token from Stripe
     const onToken = (token) => { 
@@ -40,7 +42,7 @@ const PaymentButton = ({quantity}) => {
     
     }, [stripeToken])
   return (
-    <div>
+    <div className="pay-btn-wrapper">
         <StripeCheckout
             name='Akatsuki Shop'
             billingAddress
@@ -49,7 +51,8 @@ const PaymentButton = ({quantity}) => {
             token={onToken}
             stripeKey={STRIPE_PUBLIC_KEY}
         >
-            <button style={{ width: '120px'}}> 
+         
+            <button id='pay-btn' style={{ width: '120px'}} disabled={!user} > 
                 PAY NOW
             </button>
         </StripeCheckout>

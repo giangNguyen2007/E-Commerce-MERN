@@ -16,7 +16,7 @@ const CategoryList = () => {
 const CategoryCard = ({item}) => {
   return (
     <>
-      <Link to={`/list/${item.cat}`}>
+      <Link to={`/list/${item.title}`}>
         <div className='category-card'>
             <button> {item.title + ' - Collection >'}  </button>
             <div className="image-wrapper">

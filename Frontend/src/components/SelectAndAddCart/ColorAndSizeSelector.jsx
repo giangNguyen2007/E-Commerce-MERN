@@ -1,5 +1,6 @@
 import React from 'react'
 import Selector from '../Selector/Selector'
+import './ColorAndSizeSelector.css'
 
 
 const ColorAndSizeSelector = ({colorArray, sizeArray, setSelectColor, setSelectSize}) => {
@@ -12,7 +13,7 @@ const ColorAndSizeSelector = ({colorArray, sizeArray, setSelectColor, setSelectS
     }
 
     return (
-    <div>
+    <div className="color-size-selector-wrapper">
         <div className="color-palette" >        
             <span >Color</span>
             {colorArray? colorArray.map(

@@ -37,14 +37,14 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-center">
-                <h3 className='title'> SPORT.SHOPEE.</h3>
+                <h3 className='title'> FOOT.SHOPEE.</h3>
             </div>
 
             <div className="navbar-right">
                 <div className='user-email'> 
                     {user? user.email : null}
                 </div>
-                <Link to={`/home`}>
+                <Link to={`/`}>
                     <div className='menu-item'>Home</div>
                 </Link>
 

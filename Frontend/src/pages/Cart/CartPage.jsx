@@ -1,4 +1,4 @@
-import './Cart.css'
+import './CartPage.css'
 import React, { useContext } from 'react'
 import ProductCart from './CartPageComponents/Product-Cart'
 import { Link } from 'react-router-dom';
@@ -11,6 +11,7 @@ import { saveCart } from '../../custom-hook/cartAPI';
 const CartPage = () => {
 
     const {cartItems, cartTotal, dispatchCart} = useContext(CartContext);
+    debugger;
     const {user } = useContext(AuthContext);
 
     const navigate = useNavigate();
@@ -39,8 +40,9 @@ const CartPage = () => {
         <div className="page-cart">
             <h1> YOUR BAG</h1>
 
-            <button onClick={(e) => navigate(-1)}> {'<'} BACK </button>
-            <button onClick={handleSaveCart}> SAVE CART </button>
+            <button id='back-btn' onClick={(e) => navigate(-1)}> {'<'} BACK </button>
+            <button disabled={!user} id='add-cart-btn' onClick={handleSaveCart}> SAVE CART </button>
+            {!user && <div id='login-message'>Register or Login to save cart</div>}
 
             <div className="cart-sub-wrapper">
 
@@ -71,7 +73,7 @@ const CartPage = () => {
                             <div className='check-out-item total'>€ {Math.round(cartTotal*1.1*100)/100}</div>
                         </div> 
                     </div>
-                    
+                    {!user && <div id='login-message-pay'>Register or Login to pay</div>}
                     <PaymentButton quantity = {cartTotal} />
                 
                 </div>

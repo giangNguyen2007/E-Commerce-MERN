@@ -7,10 +7,10 @@ const Footer = () => {
     <div className='footer-container'>
         <div className="left-container">
             <div className="title">
-              Akatsuki
+              Foot.Shopee
             </div>
             <div className="description">
-              React.js eCommerce app UI design full course. React shopping app UI project for beginners. React eCommerce website design from scratch.
+              Your preferred online shopping platform. Shopee offers a seamless, fun and reliable shopping experience to thousands of users.
             </div>
             <div className="social-container">
               <div className="social-icon">
@@ -45,16 +45,16 @@ const Footer = () => {
             <div className="title"> Contact</div>
             <div className="contact-item"> 
                 <RoomOutlined />
-                <div className="text">9 Rue Fronval Velizy</div>
+                <div className="text">10 Rue xxx Paris</div>
             </div>
             <div className="contact-item"> 
               <Phone />
-              <div className="text">07 82 16 19 60</div>
+              <div className="text">xx xx xx xx xx</div>
               
             </div>
             <div className="contact-item"> 
               <MailOutline />
-              <div className="text">react@gmail.com</div>
+              <div className="text">shopee@gmail.com</div>
             </div>
         </div>
     </div>

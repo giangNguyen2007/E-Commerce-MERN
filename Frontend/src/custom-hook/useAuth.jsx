@@ -32,7 +32,7 @@ const useAuth = (user) => {
             dispatchAuth( { type: 'LOG_IN', payload: response.data }) ;
 
             loadUserCart(response.data);
-            navigate('/home');
+            navigate('/');
 
             console.log(response.data);
             return response.data

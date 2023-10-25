@@ -7,11 +7,11 @@ import { categoriesData } from '../../data'
 
 const CategoryPage = () => {
     const location = useLocation();
-    const cat = location.pathname.split("/")[2];
+    const title = location.pathname.split("/")[2];
     const [colorFilter, setColorFilter] = useState("")
     const [sizeFilter, setSizeFilter] = useState("")
 
-    const {colorArray, sizeArray} = categoriesData.find( item => item.cat === cat)
+    const {colorArray, sizeArray, cat} = categoriesData.find( item => item.title === title)
 
     const handleSizeSelect = (value) => { 
         if (value === 'all') {
@@ -31,7 +31,7 @@ const CategoryPage = () => {
   
   return (
     <div className='prod-category-wrapper'>
-        <h1 class='text-xl font-bold'> Category : {cat} </h1>
+        <h1 class='text-xl font-bold'> Category : {title} </h1>
         <div className = 'filters-wrapper'>
 
             <div className = 'filters-left-wrapper'>

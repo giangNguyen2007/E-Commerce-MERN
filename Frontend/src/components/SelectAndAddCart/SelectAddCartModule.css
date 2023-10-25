@@ -6,26 +6,6 @@
 }
 
 
-/* ====== filter section ========= */
-
-.select-add-cart-wrapper .filter-wrapper{
-    display: flex;
-    margin: 10px 0px;
-}
-
-.select-add-cart-wrapper .color-palette{
-    margin-right: 40px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.select-add-cart-wrapper .select-wrapper{
-    display: flex;
-    gap: 10px;
-}
-
-
 /* ===== Add to cart section ======= */
 .select-add-cart-wrapper .add-cart-container{
     display: flex;

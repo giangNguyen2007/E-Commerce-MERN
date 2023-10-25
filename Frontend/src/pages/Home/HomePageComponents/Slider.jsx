@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const Slider = () => {
   return (
     <div className="slider">
-        <div className="arrow-cont" id="left-arrow">
+        {/* <div className="arrow-cont" id="left-arrow">
             <ArrowLeftOutlined />
         </div>
 
         <div className="arrow-cont" id="right-arrow">
             <ArrowRightOutlined />
-        </div>
+        </div> */}
 
         <div className="slide-wrapper">
             <div className="slide">

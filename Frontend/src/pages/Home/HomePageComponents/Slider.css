@@ -43,17 +43,20 @@
     /* height: 100vh; */
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* ======= SLIDE LEFT PART ====== */
 
 .slider .img-container {
+    width: 400px;
+    margin-left: 15px;
     height: 100%;
-    flex:1;
     padding: 10px;
     display: flex;
     justify-content: center;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
 }
 
 .slide img{
@@ -64,7 +67,7 @@
 /* ======== RIGHT PART ===== */
 
 .slider .info-container {
-    flex:1;
+    width: 400px;
     padding: 50px;
 }
 
