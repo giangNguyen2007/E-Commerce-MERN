@@ -11,7 +11,6 @@ import { saveCart } from '../../custom-hook/cartAPI';
 const CartPage = () => {
 
     const {cartItems, cartTotal, dispatchCart} = useContext(CartContext);
-    debugger;
     const {user } = useContext(AuthContext);
 
     const navigate = useNavigate();
