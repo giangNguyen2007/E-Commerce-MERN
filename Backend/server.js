@@ -18,7 +18,7 @@ const app = express();
 
 //middleware
 app.use(cors({
-    origin:"http://localhost:3000"
+    origin: ["http://localhost:3000", "https://foot-shopee-front.onrender.com"]
 }))
 
 app.use(express.json())
